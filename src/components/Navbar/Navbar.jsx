@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from './Link';
+import { IoIosMenu } from "react-icons/io";
+import { IoClose } from "react-icons/io5";
 
 const navData = [
     { id: 1, name: "Home", path: "/" },
@@ -10,12 +12,30 @@ const navData = [
 ];
 
 const Navbar = () => {
-    return (
-        <nav>
 
-            <ul className='flex'>
+    const [open, setOpen]=useState(false);
+    const links= navData.map((route) => <Link key={route.id} route={route}></Link>)
+    
+
+    return (
+        <nav className='flex justify-between mx-10 mt-4'>
+            <span className='flex items-center'>
+                <span onClick={()=>setOpen(!open)}>
+                    {
+                        open ?
+                <h1 className='md:hidden'><IoClose /></h1>
+                : <h1 className='md:hidden'><IoIosMenu /></h1>
+                    }
+                </span>
+                <ul className={`md:hidden absolute duration-1000 ${open?'top-8' : '-top-40'} bg-tomato-500`}>
+                    {links}
+                </ul>
+                
+                <h1 className='ml-2'>My Navbar</h1>
+            </span>
+            <ul className='md:flex hidden'>
                 {
-                    navData.map((route) => <Link key={route.id} route={route}></Link>)
+                   links
                 }
             </ul>
 
@@ -34,6 +54,7 @@ const Navbar = () => {
                 <li className='mr-10'><a href="/about">About</a></li>
                 <li className='mr-10'><a href="/blog">Blog</a></li>
             </ul> */}
+            <button>Sign In</button>
         </nav>
     );
 };
