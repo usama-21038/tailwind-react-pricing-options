@@ -1,6 +1,10 @@
 import React from 'react';
-
-const PricingOptions = () => {
+import { use } from 'react';
+const PricingOptions = ({ pricingPromise }) => {
+   
+    const pricingData=use(pricingPromise);
+    console.log(pricingData);
+   
     return (
         <div>
             
