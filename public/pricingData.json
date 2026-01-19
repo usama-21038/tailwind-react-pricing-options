@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "name": "Starter",
+    "price": 15,
+    "description": "Great for beginners starting their fitness journey.",
+    "features": [
+      "Access to gym equipment",
+      "Locker room access",
+      "Free Wi-Fi",
+      "Mobile app workout tracking",
+      "1 free fitness assessment"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Pro",
+    "price": 35,
+    "description": "Perfect for regular members who want extra support and classes.",
+    "features": [
+      "All Starter features",
+      "Group fitness classes",
+      "2 personal training sessions",
+      "Nutrition guidance",
+      "Monthly progress report"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Elite",
+    "price": 55,
+    "description": "Best for serious athletes and fitness enthusiasts.",
+    "features": [
+      "All Pro features",
+      "Unlimited personal training",
+      "24/7 gym access",
+      "Sauna & spa access",
+      "Dedicated fitness coach"
+    ]
+  }
+]
